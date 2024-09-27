@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+</head>
+<body class="bg-dark">
+    <div class="container col-6">
+        <form action="">
+            <div class="mb-3 mt-3">
+              <label for="email" class="form-label text-white">Email:</label>
+              <input type="email" class="form-control bg-danger" id="email" placeholder="email cím" name="email">
+            </div>
+            <div class="mb-3">
+              <label for="pwd" class="form-label text-white">Password:</label>
+              <input type="password" class="form-control bg-danger" id="pwd" placeholder="jelszó" name="pswd">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="text-white">Irányítószám:</label>
+                <input type="text" class="form-control bg-danger" placeholder="Irányítószám">
+            </div>
+            <div class="mb-3">
+                <label for="comment" class="text-white">Jelszóhoz mentő kérdés:</label>
+                <textarea class="form-control bg-danger" rows="2" id="comment" name="text" maxlength="100" placeholder="Kérdés"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="color" class="text-white">Válasz színt</label>
+                <input type="color" class="form-control form-control-color bg-danger" value="#00FFEE">
+            </div>
+            <button type="submit" class="btn btn-primary text-white"><a href="https://www.youtube.com/watch?v=aL2OrIqoGoM" class="text-black" target="_blank">Beküldés</a></button> 
+          </form>
+    </div> 
+</body>
+</html>

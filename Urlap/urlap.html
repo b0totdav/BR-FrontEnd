@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>űrlap</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="urlap.js"></script>
+    
+</head>
+<body>
+    <div class="container my-auto col-4">
+          <h2>Űrlap:</h2>
+        <form method="post">
+            <div class="mb-3 mt-3 ">
+                <label for="email" class="form-label">E-mail:<span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="email" placeholder="E-mail" name="email">
+            </div>
+            <div class="mb-3 ">
+                <label for="pwd" class="form-label">Jelszó:<span class="text-danger">*</span></label>
+                <input type="password" class="form-control" id="pwd" placeholder="Jelszó" name="pwd">
+            </div>
+            <div class="mb-3 ">
+                <label for="iranyit" class="form-label">Irányítószám:<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="irsz" placeholder="Irányítószám (példa: 6800) " name="irsz">
+            </div>
+            <div class="mb-3 ">
+                <label for="comment">kérdés a jelszóhoz (max. 100 betű):</label>
+                <textarea class="form-control" rows="5" id="passRec" name="passrec"></textarea> 
+                <p id="counter">100</p>
+            </div>
+            <button type="submit" class="btn btn-primary" disabled>Submit</button>
+        </form>
+        <p><span class="text-danger">*-gal jelölt elemek kitöltése kötelező!</span></p>
+        <div class="error text-danger fw-bold"></div>
+    </div>
+</body>
+</html>
