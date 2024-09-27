@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="rgb.js" defer></script>
+    <link rel="stylesheet" href="rgb.css">
+</head>
+<body class="bg-primary vh-100">
+    <div class="container mt-6 w-100 h-50 bg-dark text-white">
+        <div class="col-6">
+            <label for="Red">R - <span id="rValue">0</span></label>
+            <input type="range" class="slider" name="Red" id="Red" min="0" max="255" value="0" oninput="ColorChange()">
+        </div>
+        <div class="col-6" id="rgb"></div>  
+        <div class="col-6">
+            <label for="Green">G - <span id="gValue">0</span></label>
+            <input type="range" class="slider" name="Green" id="Green" min="0" max="255" value="0" oninput="ColorChange()">
+        </div>
+        <div class="col-6">
+            <label for="Blue">B - <span id="bValue">0</span></label>
+            <input type="range" class="slider" name="Blue" id="Blue" min="0" max="255" value="0" oninput="ColorChange()"> 
+        </div>
+        <div class="col-6">
+            <label for="Alpha">A - <span id="aValue">1</span></label>
+            <input type="range" class="slider" name="Alpha" id="Alpha" min="0" max="100" value="1" oninput="ColorChange()">
+        </div>
+        
+    </div>
+</body>
+</html>
