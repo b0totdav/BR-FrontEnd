@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body class="bg-secondary">
+    <div class="container bg-dark col-10 vh-100">
+        <fieldset class="bg-primary">
+            <div class="radio bal p-1">   
+                <div>
+                    Üzemanyag típusa:
+                </div>
+                <div>
+                    <input type="radio" name="fuelType" id="1">
+                    <label for="1">Dízel</label>
+                </div>
+                <div>
+                    <input type="radio" name="fuelType" id="2">
+                    <label for="2">Benzin</label>
+                </div>
+                <div>
+                    <input type="radio" name="fuelType" id="3">
+                <label for="3">Elektromos</label>
+                </div>
+                <div>
+                    <input type="radio" name="fuelType" id="4">
+                <label for="4">LPG</label>
+                </div>
+            </div>
+            <div class="radio jobb p-1">
+                <div> 
+                    Amortizációs díj (Ft/km):
+                </div>
+                <div>
+                    <input type="radio" name="amor" id="5">
+                    <label for="5">18</label>
+                </div>
+                <div>
+                    <input type="radio" name="amor" id="6">
+                    <label for="6">30</label>
+                </div>          
+            </div>
+        </fieldset>
+        <fieldset class="bg-warning">
+            <div id="price">
+                <label for="pricing">Benzin ára</label>
+                <input type="text" name="pricing">
+                <label for="pricing">Ft/l</label>
+            </div>
+        </fieldset>
+        <fieldset class="bg-info">
+            <div>
+                <select name="kobcenti" id="">
+                    <option value="">1000cm<sub>3</sub></option>
+                </select>
+            </div>
+            <div>
+                <label for="rendSzam">Rendszám:</label>
+                <input type="text" name="rendSzam">
+            </div>
+            <div>
+                <label for="model">Gyártó, típus:</label>
+                <input type="text" name="model">
+            </div>
+            <div class="m-1">
+                <div class="bal col-3">
+                    <label for="honnan">Honnan:</label>
+                    <input type="text" name="honnan">
+                </div>
+                <div class="jobb col-3">
+                    <label for="hova">Hová:</label>
+                    <input type="text" name="hova">
+                </div>
+            </div>
+           
+        </fieldset>
+        <fieldset class="bg-info">
+            <div class="col-6 mt-10">
+                <label for="tav">Megtett távolság:</label>
+                <input type="number" name="tav">
+                <label for="tav">km</label>
+            </div>
+        </fieldset>
+        <fieldset class="bg-danger p-2">
+            <button >Küldés</button>
+        </fieldset>
+        
+    </div>
+</body>
+</html>
