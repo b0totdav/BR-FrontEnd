@@ -1,3 +1,8 @@
+let tav=0;
+let price=0;
+let uzemanyag=0;
+let amort=0;
+
 $(function(){
     let benzin=[
         {
@@ -42,8 +47,8 @@ $(function(){
     $("form").submit(function(e){
         e.preventDefault();
     })
-    let uzemanyag;
-    let filled=[false,true,true,true,true,true,true,true,true]
+
+    let filled=[false,false,false,true,true,false,false,false,false]
     $("[name=fuelType]").change(function(){
         uzemanyag=$(this).val();
         filled[0]=true;
@@ -59,9 +64,50 @@ $(function(){
             $("[type=submit]").attr("disabled",false);
         }
     })
+
+    $("[name=amor]").change(function(){
+        amort=$(this).val();
+        filled[1]=true;
+    })
+
+    $("[name=pricing]").change(function(){
+        price=Number($(this).text());
+        filled[2]=true;
+    })
+    let model;
+    $("[name=model]").change(function(){
+        model=$(this).val();
+        filled[5]=true;
+    })
+    let honnan;
+    $("[name=honnan]").change(function(){
+        honnan=$(this).val();
+        filled[6]=true;
+    })
+    let hova;
+    $("[name=hova]").change(function(){
+        hova=$(this).val();
+        filled[7]=true;
+    })
+
+    $("[name=tav]").change(function(){
+        tav=Number($(this).text());
+        filled[8]=true;
+    })
 })
 function getUzemanyag(t){
     t.forEach((o)=>{
         $("#kobcenti").append(`<option value="${o.value}">${o.text}</option>`);
     })
+}
+
+function Szamit(){
+    let osszeg = (tav*(uzemanyag/100))*price+tav*amort;
+    console.log(tav);
+    console.log(uzemanyag);
+    console.log(price);
+    console.log(amort);
+    console.log(osszeg);
+
+    $("#e").html('A visszatérintendő költség:'+osszeg+'Ft');
 }

@@ -51,7 +51,7 @@
             <fieldset class="bg-primary p-2">
                 <div id="price">
                     <label for="pricing">Benzin ára</label>
-                    <input type="text" name="pricing">
+                    <input type="text" name="pricing" value="0">
                     <label for="pricing">Ft/l</label>
                 </div>
             </fieldset>
@@ -90,7 +90,10 @@
                 </div>
             </fieldset>
             <fieldset class="bg-primary p-2">
-                <button type="submit" disabled>Küldés</button>
+                <button type="submit" disabled onclick="Szamit()">Küldés</button>
+            </fieldset>
+            <fieldset class="bg-primary" id="e">
+
             </fieldset>
             
         </div>
