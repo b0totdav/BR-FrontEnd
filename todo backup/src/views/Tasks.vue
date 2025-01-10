@@ -25,7 +25,7 @@ const menj = (id)=>{
 }
 </script>
 
-<style>
+<style scoped>
 .task{
     border: 1px solid white;
     margin: 10px;
