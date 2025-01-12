@@ -5,7 +5,9 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   
       <nav>
-        <RouterLink to="/">Feladatok</RouterLink>
+        <div>
+          <RouterLink to="/">Feladatok</RouterLink>
+        </div>
         <RouterLink to="/new">Új feladat</RouterLink>
       </nav>
   <RouterView />

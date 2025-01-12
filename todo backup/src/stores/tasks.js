@@ -5,31 +5,31 @@ export const usetaskStore = defineStore('task', () => {
   const tasks = ref([
       {
       id: 1,
-      nev: 'Title 1',
-      leiras : 'Desc 1',
+      nev: 'Ima mondása',
+      leiras : 'Ima elmondása Szent Leclerc tiszteletére, hogy idén legyen világbajnok',
       isFinished : false,
-      deadline : '2025-01-15',
+      deadline : '2025-02-26',
       },
       {
         id: 2,
-        nev: 'Title 2',
-        leiras : 'Desc 2',
+        nev: 'Megemlékezés',
+        leiras : 'Megemlékezés a Malevelon Creecken elesett Helldiverekről',
         isFinished : false,
         deadline : '2025-01-20',
       },
       {
         id: 3,
-        nev: 'Title 3',
-        leiras : 'Desc 3',
+        nev: 'Motor',
+        leiras : '100% legális száguldás a motorral szezonkezdéskor',
         isFinished : false,
-        deadline : '2025-09-11',
+        deadline : '2025-03-01',
       },
       {
         id: 4,
-        nev: 'Title 4',
-        leiras : 'Desc 4',
+        nev: 'Vizsgaremek',
+        leiras : 'Vizsgaremek beadása',
         isFinished : false,
-        deadline : '2025-03-16',
+        deadline : '2025-04-01',
       },
     ])
  
@@ -51,15 +51,19 @@ function addTask(name, description,deadline){
   console.log(tasks.value)
 
 }
-function editTask(id, name, description, deadline){
-  let tmp = tasks.value.find( (t) => t.id == id )
-  tmp.nev = name
-  tmp.leiras = description
-  tmp.deadline = deadline
-  console.log(tasks.value)
 
+const taskToEdit = ref({
+  id: 0,
+  nev: '',
+  leiras: ``,
+  isFinished: false,
+  deadline: ''
+})
 
+function findTaskToEdit(id){
+  taskToEdit.value = tasks.value.find(task => task.id === id)
 }
 
-return { tasks, teljesitve, addTask, editTask }
+
+return { tasks, teljesitve, addTask, taskToEdit, findTaskToEdit  }
 })

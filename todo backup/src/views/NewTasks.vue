@@ -1,19 +1,21 @@
 <template>
-  <div class="container">
-    <div id="name">
-      <label for="name">Név:</label>
-      <input type="text" name="name" id="nameInput">
-    </div>
-    <div id="desc">
-      <label for="description">Leírás:</label>
-      <textarea name="description" id="descriptionInput" cols="30" rows="10"></textarea>
-    </div>
-    <div id="dead">
-      <label for="deadline">Határidő:</label>
-      <input type="date" name="deadline" id="deadlineInput">
-    </div>
-    <button @click="addTask">Mentés</button>
-  </div>
+  <table>
+    <tr>
+      <td><label for="name">Név:</label></td>
+      <td><input type="text" name="name" id="nameInput"></td>
+    </tr>
+    <tr>
+      <td> <label for="description">Leírás:</label></td>
+      <td><textarea name="description" id="descriptionInput" cols="30" rows="10"></textarea></td>
+    </tr>
+    <tr>
+      <td><label for="deadline">Határidő:</label></td>
+      <td><input type="date" name="deadline" id="deadlineInput"></td>
+    </tr>
+  </table>
+  <div></div>
+  <button @click="addTask">Mentés</button>
+    
 </template>
 
 <script setup>

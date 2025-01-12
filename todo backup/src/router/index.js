@@ -9,7 +9,7 @@ const router = createRouter({
       component: () => import('../views/Tasks.vue'),
     },
     {
-      path: '/edit/:id',
+      path: '/edit',
       name: 'editTask',
       component: () => import('../views/EditTasks.vue'),
     },

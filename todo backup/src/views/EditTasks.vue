@@ -1,45 +1,36 @@
 <template>
-  <div class="container">
-    <div id="name">
-      <label for="name">Név:</label>
-      <input type="text" name="name" id="nameInput">
-    </div>
-    <div id="desc">
-      <label for="description">Leírás:</label>
-      <textarea name="description" id="descriptionInput" cols="30" rows="10"></textarea>
-    </div>
-    <div id="dead">
-      <label for="deadline">Határidő:</label>
-      <input type="date" name="deadline" id="deadlineInput">
-    </div>
-    <button @click="editTask">Mentés</button>
-  </div>
+  <table>
+    <tr>
+      <td><label for="name">Feladat neve: </label></td>
+      <td><input type="text" id="name" v-model="tasksStore.taskToEdit.nev"></td>
+    </tr>
+    <tr>
+      <td><label for="desc">Leírás: </label></td>
+      <td><textarea id="desc" name="desc" v-model="tasksStore.taskToEdit.leiras"></textarea></td>
+    </tr>
+    <tr>
+      <td><label for="deadl">Határidő: </label></td>
+      <td><input type="date" name="dead" id="dead" v-model="tasksStore.taskToEdit.deadline"></td>
+    </tr>
+  </table>       
+    <div></div>
+    <button @click="save()">Mentés</button>
 </template>
-
-<script setup>
-import { usetaskStore } from '@/stores/tasks';
-
-const taskStore=usetaskStore()
-
-const task = taskStore.task;
-
-function editTask() {
-  task.name = document.getElementById('nameInput').value;
-  task.description = document.getElementById('descriptionInput').value;
-  task.deadline = document.getElementById('deadlineInput').value;
-  taskStore.updateTask(task);
-
-  // Reset the form
-  document.getElementById('nameInput').value = '';
-  document.getElementById('descriptionInput').value = '';
-  document.getElementById('deadlineInput').value = '';
-  // Close the modal
-  document.getElementById('editTaskModal').style.display = 'none';
-  // Refresh the task list
-  taskStore.fetchTasks();
-  // Notify the user
-  alert('Feladat sikeresen módosítva!');
-
   
+<script setup>
+import { usetaskStore } from '@/stores/tasks.js';
+import { useRouter } from 'vue-router'
+  const tasksStore=usetaskStore()
+  const Router=useRouter()
+
+const save= ()=>{
+  tasksStore.taskToEdit.nev=tasksStore.taskToEdit.nev
+  tasksStore.taskToEdit.leiras=tasksStore.taskToEdit.leiras
+  tasksStore.taskToEdit.deadline=tasksStore.taskToEdit.deadline
+  Router.push('/tasks')
 }
 </script>
+  
+<style scoped>
+  
+</style>

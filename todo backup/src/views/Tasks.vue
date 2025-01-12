@@ -7,8 +7,8 @@
       <p>{{ t.isFinished }}</p>    
       
       <div class="footer">
-        <button @click="tasksStore.teljesitve(t.id)">Teljesítve</button>
-        <button @click="menj(t.id)">Szerkesztés</button>
+        <button @click="tasksStore.teljesitve(t.id)" v-show="!t.isFinished==true">Teljesítve</button>
+        <button @click="menj(t.id)" v-show="!t.isFinished==true">Szerkesztés</button>
       </div>
     </div>
   </div>
@@ -19,9 +19,11 @@ import { ref } from 'vue';
 import { usetaskStore } from '@/stores/tasks';
 import { useRoute, useRouter } from 'vue-router';
 
+const router = useRouter();
 const tasksStore = usetaskStore();
 const menj = (id)=>{
-  router.push(`/edit/${id}`)
+  tasksStore.findTaskToEdit(id);
+  router.push(`/edit`);
 }
 </script>
 
@@ -29,5 +31,6 @@ const menj = (id)=>{
 .task{
     border: 1px solid white;
     margin: 10px;
+    padding: 5px;
 }
 </style>
