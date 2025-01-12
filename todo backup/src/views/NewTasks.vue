@@ -64,6 +64,11 @@ const addTask = () => {
 </script>
 
 <style scoped>
+template{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 div{
   margin: 10px;
 }

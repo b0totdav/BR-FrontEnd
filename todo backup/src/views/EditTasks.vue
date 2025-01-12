@@ -32,5 +32,8 @@ const save= ()=>{
 </script>
   
 <style scoped>
-  
+  template{
+  display: flex;
+  flex-wrap: wrap;
+}
 </style>

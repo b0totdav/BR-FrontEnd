@@ -28,6 +28,10 @@ const menj = (id)=>{
 </script>
 
 <style scoped>
+template{
+  display: flex;
+  flex-wrap: wrap;
+}
 .task{
     border: 1px solid white;
     margin: 10px;
