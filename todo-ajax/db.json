@@ -1,0 +1,10 @@
+{
+    "goods" :[
+        {"id" :1 , "good": "Répa", "price": 300},
+        {"id" :2 , "good": "Retek", "price":500},
+        {"id" :3 , "good": "Mogyoró", "price":200},
+        {"id" :4 , "good": "Vodka", "price":4000},
+        {"id" :5 , "good": "Narancs", "price":700},
+        {"id" :6 , "good": "Tequila", "price":8000}
+    ]
+}
