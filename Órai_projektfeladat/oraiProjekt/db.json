@@ -1,3 +1,24 @@
 {
-    
+    "reservedDates" : [
+        {
+        "dateId" : "h8",
+        "title" : "Foglalt" 
+        },
+        {
+            "dateId" : "k9",
+            "title" : "Foglalt"
+        },
+        {
+            "dateId" : "s13",
+            "title" : "Foglalt" 
+        },
+        {
+            "dateId" : "cs15",
+            "title" : "Foglalt" 
+        },
+        {
+            "dateId" : "p14",
+            "title" : "Foglalt"
+        }
+    ]    
 }

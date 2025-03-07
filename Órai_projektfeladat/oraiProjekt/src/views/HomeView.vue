@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-    <table>
+    <table id="tabla">
         <tr>
             <th></th>
         <th>Hétfő</th>
@@ -78,10 +78,41 @@
 </div>
 </template>
 <script setup>
+import {useDateStore} from '../stores/dates.js'
+import {onMounted} from 'vue'
 
+const table = document.getElementById('table')
+const dateStore = useDateStore()
+
+onMounted(()=>{
+    dateStore.getDates();
+})
+
+dateStore.dates.forEach(date => {
+    table.forEach(td=>{
+        if(td.getAttribute('id')==date.id){
+            td.innerText = date.value;
+        }
+        else{
+            td.innerHTML = '<button type="button" @click="Reserve(id)">Foglalás</button>'
+        }
+    })
+    
+});
 </script>
 
 <style scoped>
+table{
+    border: solid 1px black;
+    text-align: center;
+    justify-self: center;
+}
+td{
+    border: solid 1px black;
+    padding: 10px;
+    width: 100px;
+    border-collapse: collapse;
+}
 tr:hover{
     background-color: #9ff2fd7c;
 }
