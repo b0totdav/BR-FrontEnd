@@ -2,7 +2,7 @@
 <div class="container">
     <table id="tabla">
         <tr>
-            <th></th>
+        <th></th>
         <th>Hétfő</th>
         <th>Kedd</th>
         <th>Szerda</th>
@@ -80,25 +80,28 @@
 <script setup>
 import {useDateStore} from '../stores/dates.js'
 import {onMounted} from 'vue'
+import jQuery from 'vue'
 
-const table = document.getElementById('table')
+const table = document.getElementById('tabla')
 const dateStore = useDateStore()
 
 onMounted(()=>{
     dateStore.getDates();
 })
 
-dateStore.dates.forEach(date => {
-    table.forEach(td=>{
-        if(td.getAttribute('id')==date.id){
-            td.innerText = date.value;
-        }
-        else{
-            td.innerHTML = '<button type="button" @click="Reserve(id)">Foglalás</button>'
+$('#tabla tr').each(function(){
+    $(this).find('td').each(function(){
+        dataStore.dates.forEach(date=>{
+        if(cell.getAttribute('id')==date.dateId){
+            cell.innerText = date.value;
+            console.log(cell.innerText)
+        }else{
+            cell.innerHTML = '<button type="button" @click="reserve()">Foglalás</button>'
+            console.log(cell.innerHTML)
         }
     })
-    
-});
+    })
+})
 </script>
 
 <style scoped>

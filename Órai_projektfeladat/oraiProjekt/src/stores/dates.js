@@ -2,13 +2,12 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import axios from 'axios'
 
-export const useDateStore = defineStore('date', () => {
-  const date = ref({})
+export const useDateStore = defineStore('dates', () => {
+  const dates = ref([])
 
   const getDates = () =>{
     axios.get('http://localhost:3000/reservedDates')
-    .then(res => res.json())
-    .then(data => date.value = data)
+    .then(res =>dates.value = res.data)
   }
-  return { date, getDates}
+  return { dates, getDates}
 })

@@ -9,7 +9,7 @@ import router from './router'
 import Toast from "vue-toastification";
 import "vue-toastification/dist/index.css";
 
-
+import "../../../../BR-FrontEnd/jqueery-3.7.1.min.js"
 
 const app = createApp(App)
 
