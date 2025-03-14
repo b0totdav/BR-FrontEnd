@@ -20,4 +20,9 @@ describe('Táblázat', () => {
     const wrapper = mount(HomeView)
     expect(wrapper.text()).toContain('15:00')
   })
+
+  it('Megjelenik-e a gomb?', () =>{
+    const wrapper = mount(HomeView)
+    expect(wrapper.text()).toContain('Foglalás')
+  })
 })
