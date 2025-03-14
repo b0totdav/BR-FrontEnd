@@ -19,10 +19,12 @@
   import { ref } from 'vue'
   import { useRoute, useRouter } from 'vue-router'
   import { useDateStore } from '../stores/dates.js'
+import { useToast } from 'vue-toastification'
   
   const route = useRoute()
   const router = useRouter()
   const dateStore = useDateStore()
+  const toast = useToast()
   
   const dateId = ref(route.params.dateId)
   const name = ref("")
@@ -32,7 +34,11 @@
     if (name.value && phone.value) {
       const reservationTitle = `${name.value} - ${phone.value}`
       dateStore.reserveDate(dateId.value, reservationTitle)
+      toast.success("Sikeres foglalás")
       router.push("/")
+    }
+    else{
+      toast.error("Minden mezőt ki kell tölteni")
     }
   }
   </script>
