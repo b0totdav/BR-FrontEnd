@@ -1,24 +1,29 @@
 {
-    "reservedDates" : [
-        {
-        "dateId" : "h8",
-        "title" : "Foglalt" 
-        },
-        {
-            "dateId" : "k9",
-            "title" : "Foglalt"
-        },
-        {
-            "dateId" : "s13",
-            "title" : "Foglalt" 
-        },
-        {
-            "dateId" : "cs15",
-            "title" : "Foglalt" 
-        },
-        {
-            "dateId" : "p14",
-            "title" : "Foglalt"
-        }
-    ]    
+  "reservedDates": [
+    {
+      "dateId": "h8",
+      "title": "Foglalt",
+      "id": "44db"
+    },
+    {
+      "dateId": "k9",
+      "title": "Foglalt",
+      "id": "8391"
+    },
+    {
+      "dateId": "sz13",
+      "title": "Foglalt",
+      "id": "84a8"
+    },
+    {
+      "dateId": "cs15",
+      "title": "Foglalt",
+      "id": "3b69"
+    },
+    {
+      "dateId": "p14",
+      "title": "Foglalt",
+      "id": "70e8"
+    }
+  ]
 }
